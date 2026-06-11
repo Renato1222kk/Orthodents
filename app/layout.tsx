@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Orthodentes São João del Rei" }],
   icons: {
-    icon: "/hero-orthodentes.png",
-    shortcut: "/hero-orthodentes.png",
-    apple: "/hero-orthodentes.png",
+    icon: "/orthodentes.png",
+    shortcut: "/orthodentes.png",
+    apple: "/orthodentes.png",
   },
   openGraph: {
     type: "website",
