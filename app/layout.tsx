@@ -12,14 +12,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://orthodentes.com.br"),
+  metadataBase: new URL("https://orthodents-hazel.vercel.app"),
   title: {
-    default:
-      "Orthodentes São João del Rei — Clínica Odontológica",
+    default: "Orthodentes São João del Rei — Clínica Odontológica",
     template: "%s | Orthodentes São João del Rei",
   },
   description:
-    "Clínica odontológica em São João del Rei. Implantes, aparelho ortodôntico, clareamento, estética dental e mais. Tecnologia, cuidado e atendimento humanizado. Agende sua avaliação.",
+    "Tecnologia, cuidado e atendimento humanizado para transformar o seu sorriso.",
   keywords: [
     "dentista em São João del Rei",
     "Orthodentes",
@@ -39,11 +38,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
+    url: "https://orthodents-hazel.vercel.app",
     siteName: "Orthodentes São João del Rei",
     title: "Orthodentes São João del Rei — Clínica Odontológica",
     description:
-      "Tecnologia, cuidado e atendimento humanizado para transformar o seu sorriso em São João del Rei. Agende sua avaliação.",
-    images: [{ url: "/orthodentes.png", width: 512, height: 512, alt: "Orthodentes" }],
+      "Tecnologia, cuidado e atendimento humanizado para transformar o seu sorriso.",
+    images: [
+      {
+        url: "/og-orthodentes.png",
+        width: 1200,
+        height: 630,
+        alt: "Orthodentes São João del Rei — Clínica Odontológica",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Orthodentes São João del Rei — Clínica Odontológica",
+    description:
+      "Tecnologia, cuidado e atendimento humanizado para transformar o seu sorriso.",
+    images: ["/og-orthodentes.png"],
   },
 };
 
