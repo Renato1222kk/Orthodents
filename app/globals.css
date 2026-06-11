@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #06225c;
+  --brand-dark: #03163f;
+  --brand-light: #eaf2ff;
+  --ink: #5f6b7a;
+  --hair: #e6eaf2;
+}
+
+@layer base {
+  * {
+    @apply border-hair;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-[#1b2330] antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: rgba(6, 34, 92, 0.12);
+    color: #06225c;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-container px-5 sm:px-6 lg:px-8;
+  }
+
+  /* Botão primário */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all duration-200 hover:bg-brand-dark hover:shadow-card focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/40;
+  }
+
+  /* Botão secundário/outline */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-hair bg-white px-5 py-3 text-sm font-semibold text-brand transition-all duration-200 hover:border-brand/30 hover:bg-brand-light focus:outline-none focus-visible:ring-2 focus-visible:ring-brand/30;
+  }
+
+  .btn-ghost-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-white/10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-light px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand;
+  }
+
+  .card {
+    @apply rounded-2xl border border-hair bg-white shadow-soft;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-bold text-[#04361a] shadow-soft transition-all hover:brightness-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/40;
+  }
+
+  /* Conteúdo de texto longo (páginas legais) */
+  .legal-prose h2 {
+    @apply mt-10 text-xl font-bold text-brand sm:text-2xl;
+  }
+  .legal-prose h3 {
+    @apply mt-6 text-base font-bold text-[#2b3a55] sm:text-lg;
+  }
+  .legal-prose p {
+    @apply mt-3 leading-relaxed text-ink;
+  }
+  .legal-prose ul {
+    @apply mt-3 space-y-2;
+  }
+  .legal-prose li {
+    @apply flex items-start gap-2.5 leading-relaxed text-ink;
+  }
+  .legal-prose a {
+    @apply font-semibold text-brand underline-offset-2 hover:underline;
+  }
+}
+
+/* Esconde scrollbar horizontal em faixas decorativas */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

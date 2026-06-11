@@ -1,0 +1,65 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingButtons from "@/components/FloatingButtons";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://orthodentes.com.br"),
+  title: {
+    default:
+      "Orthodentes São João del Rei — Clínica Odontológica",
+    template: "%s | Orthodentes São João del Rei",
+  },
+  description:
+    "Clínica odontológica em São João del Rei. Implantes, aparelho ortodôntico, clareamento, estética dental e mais. Tecnologia, cuidado e atendimento humanizado. Agende sua avaliação.",
+  keywords: [
+    "dentista em São João del Rei",
+    "Orthodentes",
+    "clínica odontológica",
+    "implantes dentários",
+    "aparelho ortodôntico",
+    "clareamento dental",
+    "estética dental",
+    "odontologia São João del Rei",
+  ],
+  authors: [{ name: "Orthodentes São João del Rei" }],
+  icons: {
+    icon: "/hero-orthodentes.png",
+    shortcut: "/hero-orthodentes.png",
+    apple: "/hero-orthodentes.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Orthodentes São João del Rei",
+    title: "Orthodentes São João del Rei — Clínica Odontológica",
+    description:
+      "Tecnologia, cuidado e atendimento humanizado para transformar o seu sorriso em São João del Rei. Agende sua avaliação.",
+    images: [{ url: "/orthodentes.png", width: 512, height: 512, alt: "Orthodentes" }],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="pt-BR" className={inter.variable}>
+      <body className="flex min-h-screen flex-col overflow-x-hidden bg-white">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <FloatingButtons />
+      </body>
+    </html>
+  );
+}
